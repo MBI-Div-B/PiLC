@@ -1,0 +1,7 @@
+Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+Warning (13008): TRI or OPNDRN buffers permanently disabled
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+Warning (13024): Output pins are stuck at VCC or GND
+Warning (332060): Node: SPI_CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: PiLC_Firmware_1_3:inst1|Spi_MISO_En was determined to be a clock but was found without an associated clock assignment.

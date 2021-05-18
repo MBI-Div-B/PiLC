@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Wed Feb 03 14:37:10 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : PiLC
+Top-level Entity Name : PILC
+Family : Cyclone IV E
+Total logic elements : 4,530
+    Total combinational functions : 2,888
+    Dedicated logic registers : 2,877
+Total registers : 2879
+Total pins : 85
+Total virtual pins : 0
+Total memory bits : 4,160
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

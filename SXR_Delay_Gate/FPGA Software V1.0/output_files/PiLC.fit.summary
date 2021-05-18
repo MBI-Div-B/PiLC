@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May 06 14:53:15 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : PiLC
+Top-level Entity Name : PILC
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 3,430 / 22,320 ( 15 % )
+    Total combinational functions : 2,876 / 22,320 ( 13 % )
+    Dedicated logic registers : 2,067 / 22,320 ( 9 % )
+Total registers : 2085
+Total pins : 85 / 154 ( 55 % )
+Total virtual pins : 0
+Total memory bits : 4,160 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 16 / 132 ( 12 % )
+Total PLLs : 1 / 4 ( 25 % )

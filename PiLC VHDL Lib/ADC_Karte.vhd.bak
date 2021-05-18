@@ -1,0 +1,73 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity ADC_Karte is 
+	port ( 	
+				CLK_Uart: in std_logic;
+				RXD: in std_logic;
+				Data_out: out STD_LOGIC_VECTOR (31 downto 0) := x"00000000"
+				);
+	end ADC_Karte;
+	
+architecture Verhalten of ADC_Karte is
+signal prescaler : unsigned(1 downto 0) := "00";            -- clk = 8*Baudrate
+signal rxd_sr    : std_logic_vector (2 downto 0) := "111";  -- Flankenerkennung und Eintakten
+signal start     : std_logic := '0'; 
+signal rxdat     : std_logic_vector (17 downto 0) := "000000000000000000"; 
+signal rxbitcnt  : integer range 0 to 18 := 17;
+signal Parity_Ready : std_logic := '0';
+signal RXD_fin: std_logic := '0';
+signal UART_Data: unsigned(15 downto 0) := x"0000";  
+begin	
+process(CLK_Uart)
+variable q : std_logic := '0';
+
+begin
+----------------------------------------------	
+if	(CLK_Uart'event and CLK_Uart='1') then
+--UART Empfangen
+	prescaler <= prescaler+1;
+	rxd_sr <= rxd_sr(1 downto 0) & RXD;
+	if (rxd_sr = "100" and rxbitcnt=18) then   -- fallende Flanke = Startbit
+         start <= '1';                           -- 1 FF nötig wegen evtl. Glitches auf Kombinatorik
+      end if; 
+	if (rxbitcnt<18) then                       -- Empfang läuft
+		if (prescaler="10") then               -- In der Bitmitte abtasten
+			rxdat(rxbitcnt) <= rxd_sr(2);        -- Jedes Bit wird sofort nach Empfang ausgegeben --> kein Schieberegister nötig, MUX spart FFs
+			rxbitcnt <= rxbitcnt+1;
+		end if;	
+		else                                       -- warten auf Startbit
+         if (start = '1') then                   -- fallende Flanke Startbit erkannt
+            prescaler <= "01";                  -- erst mal nur halbe Bitzeit abwarten
+            rxbitcnt  <= 0;
+            start     <= '0';
+				RXD_fin<='0';
+         end if;
+		 end if;
+		 
+	if ((rxbitcnt=18) and (RXD_fin='0')) then
+		q := '0';
+		for i in 1 to 17 loop
+			q := q xor rxdat(i);
+		end loop;
+		Parity_Ready<='1';
+		RXD_fin<='1';
+
+	end if;	
+	
+	if (Parity_Ready='1') then
+		Parity_Ready<='0';
+		if q='0' then
+		UART_Data <= unsigned(rxdat(17 downto 2));
+		Data_out(15 downto 0)<= rxdat(17 downto 2);--UART_Data <= x"FFFF";
+		end if;
+	end if;
+----------------------------------------------		
+	
+	
+	end if;
+end process;	
+----------------------------------------
+		
+end Verhalten; 

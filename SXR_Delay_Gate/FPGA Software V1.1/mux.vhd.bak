@@ -1,0 +1,21 @@
+library ieee;
+usse ieee.std_logic_1164.all
+
+entity mux is
+	port (
+	in0	: in std_logic;
+	in1	: in std_logic;
+	sel	: in std_logic;
+	out0	: out std_logic
+	);
+end mux;
+
+
+
+architecture verhalten of mux is
+
+begin
+	out  <= in0 then sel = '0' else in1;
+end verhalten;
+	
+	

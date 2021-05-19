@@ -96,6 +96,8 @@ begin
 -----------------------------------------------
 		  when x"02" => Trigger_Gate_Start	<= '1';	-- ehemals "Freerun_Gate_Start"
 -----------------------------------------------		
+		  when x"03" => Trigger_Gate_Start	<= '1';	-- neuer Parameter in Controllregister, siehe Mux
+-----------------------------------------------		
 		  when others =>	
 
     end case;

@@ -1,0 +1,6 @@
+Warning (332060): Node: SPI_CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: PiLC_Firmware_1_3:inst1|Spi_MISO_En was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: SPI_CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: PiLC_Firmware_1_3:inst1|Spi_MISO_En was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: SPI_CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: PiLC_Firmware_1_3:inst1|Spi_MISO_En was determined to be a clock but was found without an associated clock assignment.

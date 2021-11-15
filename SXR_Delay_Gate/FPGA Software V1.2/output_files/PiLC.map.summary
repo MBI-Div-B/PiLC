@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Nov 15 13:47:43 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : PiLC
+Top-level Entity Name : PILC
+Family : Cyclone IV E
+Total logic elements : 566
+    Total combinational functions : 407
+    Dedicated logic registers : 380
+Total registers : 382
+Total pins : 85
+Total virtual pins : 0
+Total memory bits : 1,728
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

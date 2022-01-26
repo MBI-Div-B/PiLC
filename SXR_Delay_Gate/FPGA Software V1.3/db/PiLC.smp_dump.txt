@@ -1,0 +1,98 @@
+
+State Machine - |PILC|Delay_Gategenerator:inst7|Gate_State
+Name Gate_State.Wait_For_Reset Gate_State.Wait_For_Time Gate_State.Wait_For_Gate_Delay Gate_State.Wait_For_Trigger Gate_State.Wait_For_Start 
+Gate_State.Wait_For_Start 0 0 0 0 0 
+Gate_State.Wait_For_Trigger 0 0 0 1 1 
+Gate_State.Wait_For_Gate_Delay 0 0 1 0 1 
+Gate_State.Wait_For_Time 0 1 0 0 1 
+Gate_State.Wait_For_Reset 1 0 0 0 1 
+
+State Machine - |PILC|Delay_Gategenerator:inst4|Gate_State
+Name Gate_State.Wait_For_Reset Gate_State.Wait_For_Time Gate_State.Wait_For_Gate_Delay Gate_State.Wait_For_Trigger Gate_State.Wait_For_Start 
+Gate_State.Wait_For_Start 0 0 0 0 0 
+Gate_State.Wait_For_Trigger 0 0 0 1 1 
+Gate_State.Wait_For_Gate_Delay 0 0 1 0 1 
+Gate_State.Wait_For_Time 0 1 0 0 1 
+Gate_State.Wait_For_Reset 1 0 0 0 1 
+
+State Machine - |PILC|Delay_Gategenerator:inst|Gate_State
+Name Gate_State.Wait_For_Reset Gate_State.Wait_For_Time Gate_State.Wait_For_Gate_Delay Gate_State.Wait_For_Trigger Gate_State.Wait_For_Start 
+Gate_State.Wait_For_Start 0 0 0 0 0 
+Gate_State.Wait_For_Trigger 0 0 0 1 1 
+Gate_State.Wait_For_Gate_Delay 0 0 1 0 1 
+Gate_State.Wait_For_Time 0 1 0 0 1 
+Gate_State.Wait_For_Reset 1 0 0 0 1 
+
+State Machine - |PILC|PiLC_Firmware_1_3:inst1|SDRAM_Read
+Name SDRAM_Read.Wait_RD_St_L SDRAM_Read.RD_Data_2_L SDRAM_Read.RD_Data_2_H SDRAM_Read.RD_Data_1_L SDRAM_Read.RD_ADDR_Data_1_H SDRAM_Read.Wait_RD_St_H SDRAM_Read.CK_ADDR_Max SDRAM_Read.Wait_Start 
+SDRAM_Read.Wait_Start 0 0 0 0 0 0 0 0 
+SDRAM_Read.CK_ADDR_Max 0 0 0 0 0 0 1 1 
+SDRAM_Read.Wait_RD_St_H 0 0 0 0 0 1 0 1 
+SDRAM_Read.RD_ADDR_Data_1_H 0 0 0 0 1 0 0 1 
+SDRAM_Read.RD_Data_1_L 0 0 0 1 0 0 0 1 
+SDRAM_Read.RD_Data_2_H 0 0 1 0 0 0 0 1 
+SDRAM_Read.RD_Data_2_L 0 1 0 0 0 0 0 1 
+SDRAM_Read.Wait_RD_St_L 1 0 0 0 0 0 0 1 
+
+State Machine - |PILC|PiLC_Firmware_1_3:inst1|SDRAM_Write
+Name SDRAM_Write.Wait_WR_S_L SDRAM_Write.Reset_Data_RDY SDRAM_Write.WR_Data_2_L SDRAM_Write.WR_Data_2_H SDRAM_Write.WR_Data_1_L SDRAM_Write.Wait_WR_St_H 
+SDRAM_Write.Wait_WR_St_H 0 0 0 0 0 0 
+SDRAM_Write.WR_Data_1_L 0 0 0 0 1 1 
+SDRAM_Write.WR_Data_2_H 0 0 0 1 0 1 
+SDRAM_Write.WR_Data_2_L 0 0 1 0 0 1 
+SDRAM_Write.Reset_Data_RDY 0 1 0 0 0 1 
+SDRAM_Write.Wait_WR_S_L 1 0 0 0 0 1 
+
+State Machine - |PILC|PiLC_Firmware_1_3:inst1|PiLC_Time_Flow
+Name PiLC_Time_Flow.Running PiLC_Time_Flow.Tuning PiLC_Time_Flow.Windup PiLC_Time_Flow.Limit_Esum PiLC_Time_Flow.Calc_Esum PiLC_Time_Flow.Filter_e PiLC_Time_Flow.Compare PiLC_Time_Flow.Init 
+PiLC_Time_Flow.Init 0 0 0 0 0 0 0 0 
+PiLC_Time_Flow.Compare 0 0 0 0 0 0 1 1 
+PiLC_Time_Flow.Filter_e 0 0 0 0 0 1 0 1 
+PiLC_Time_Flow.Calc_Esum 0 0 0 0 1 0 0 1 
+PiLC_Time_Flow.Limit_Esum 0 0 0 1 0 0 0 1 
+PiLC_Time_Flow.Windup 0 0 1 0 0 0 0 1 
+PiLC_Time_Flow.Tuning 0 1 0 0 0 0 0 1 
+PiLC_Time_Flow.Running 1 0 0 0 0 0 0 1 
+
+State Machine - |PILC|PiLC_Firmware_1_3:inst1|State_counter
+Name State_counter.End_of_SPI_Trans State_counter.CRC_Data_I_check State_counter.MISO_Update_CRC State_counter.S_B_Config State_counter.CRC_calc State_counter.CRC_S_B_Config State_counter.WT_F_Data_I State_counter.MISO_Update_Data State_counter.CP_Data_O_to_MISO State_counter.LD_Data_O State_counter.WT_F_SPI_Trans 
+State_counter.WT_F_SPI_Trans 0 0 0 0 0 0 0 0 0 0 0 
+State_counter.LD_Data_O 0 0 0 0 0 0 0 0 0 1 1 
+State_counter.CP_Data_O_to_MISO 0 0 0 0 0 0 0 0 1 0 1 
+State_counter.MISO_Update_Data 0 0 0 0 0 0 0 1 0 0 1 
+State_counter.WT_F_Data_I 0 0 0 0 0 0 1 0 0 0 1 
+State_counter.CRC_S_B_Config 0 0 0 0 0 1 0 0 0 0 1 
+State_counter.CRC_calc 0 0 0 0 1 0 0 0 0 0 1 
+State_counter.S_B_Config 0 0 0 1 0 0 0 0 0 0 1 
+State_counter.MISO_Update_CRC 0 0 1 0 0 0 0 0 0 0 1 
+State_counter.CRC_Data_I_check 0 1 0 0 0 0 0 0 0 0 1 
+State_counter.End_of_SPI_Trans 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PILC|PiLC_Firmware_1_3:inst1|SDRAM_CONTROL:DRAM|control_curr_state
+Name control_curr_state.RD2WR3 control_curr_state.RD2WR2 control_curr_state.RD2WR1 control_curr_state.RD3 control_curr_state.RD2 control_curr_state.RD1 control_curr_state.RD control_curr_state.WR3 control_curr_state.WR2 control_curr_state.WR1 control_curr_state.WR control_curr_state.ACT1 control_curr_state.ACT control_curr_state.PRE1 control_curr_state.PRE control_curr_state.IDLE control_curr_state.AUTO_REF6 control_curr_state.AUTO_REF5 control_curr_state.AUTO_REF4 control_curr_state.AUTO_REF3 control_curr_state.AUTO_REF2 control_curr_state.AUTO_REF1 control_curr_state.AUTO_REF control_curr_state.INIT_FINISHED control_curr_state.INIT_MRS control_curr_state.INIT_WAIT 
+control_curr_state.INIT_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+control_curr_state.INIT_MRS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+control_curr_state.INIT_FINISHED 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+control_curr_state.AUTO_REF 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+control_curr_state.AUTO_REF1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+control_curr_state.AUTO_REF2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+control_curr_state.AUTO_REF3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+control_curr_state.AUTO_REF4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+control_curr_state.AUTO_REF5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+control_curr_state.AUTO_REF6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+control_curr_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.PRE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.PRE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.ACT 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.ACT1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.WR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.WR1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.WR2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.WR3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD2WR1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD2WR2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+control_curr_state.RD2WR3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

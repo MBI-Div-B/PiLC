@@ -96,6 +96,12 @@ begin
 -----------------------------------------------
 		  when x"02" => Trigger_Gate_Start	<= '1';	-- ehemals "Freerun_Gate_Start"
 -----------------------------------------------		
+-- Nachfolgende Bits hinzugefuegt wegen Muxer zur Auswahl der Kameras (siehe Verdrahtunsplan)		  
+-----------------------------------------------		
+		  when x"03" => Trigger_Gate_Start	<= '1';	
+-----------------------------------------------		
+		  when x"04" => Trigger_Gate_Start	<= '1';	
+-----------------------------------------------		
 		  when others =>	
 
     end case;

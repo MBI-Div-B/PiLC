@@ -2238,7 +2238,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1168 1192 1432 1400)
+	(rect 1168 1168 1432 1376)
 	(text "Delay_Gategenerator" (rect 5 0 110 12)(font "Arial" ))
 	(text "inst7" (rect 8 192 30 209)(font "Intel Clear" ))
 	(port
@@ -2608,22 +2608,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 520 728)
 )
 (connector
-	(text "PiLC_clk" (rect 1104 1208 1147 1220)(font "Arial" ))
-	(pt 1168 1224)
-	(pt 1086 1224)
-)
-(connector
-	(text "Gated_Trigger" (rect 1096 1224 1163 1241)(font "Intel Clear" ))
-	(pt 1086 1240)
-	(pt 1168 1240)
-)
-(connector
-	(text "Control[31..0]" (rect 1074 1288 1138 1305)(font "Intel Clear" ))
-	(pt 1072 1304)
-	(pt 1168 1304)
-	(bus)
-)
-(connector
 	(text "Gate_2" (rect 922 664 956 681)(font "Intel Clear" ))
 	(pt 896 680)
 	(pt 1016 680)
@@ -2677,25 +2661,41 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "Gate_Time_3[31..0]" (rect 1090 1304 1183 1321)(font "Intel Clear" ))
-	(pt 1072 1320)
-	(pt 1168 1320)
-	(bus)
-)
-(connector
-	(text "Gate_Delay_3[31..0]" (rect 1088 1336 1185 1353)(font "Intel Clear" ))
-	(pt 1072 1352)
-	(pt 1168 1352)
-	(bus)
-)
-(connector
 	(text "Gate_3" (rect 906 760 940 777)(font "Intel Clear" ))
 	(pt 992 776)
 	(pt 896 776)
 )
 (connector
-	(text "Gate_3" (rect 1442 1208 1476 1225)(font "Intel Clear" ))
-	(pt 1432 1224)
-	(pt 1504 1224)
+	(text "PiLC_clk" (rect 1104 1184 1147 1196)(font "Arial" ))
+	(pt 1168 1200)
+	(pt 1086 1200)
+)
+(connector
+	(text "Gated_Trigger" (rect 1096 1200 1163 1217)(font "Intel Clear" ))
+	(pt 1086 1216)
+	(pt 1168 1216)
+)
+(connector
+	(text "Control[31..0]" (rect 1074 1264 1138 1281)(font "Intel Clear" ))
+	(pt 1072 1280)
+	(pt 1168 1280)
+	(bus)
+)
+(connector
+	(text "Gate_Time_3[31..0]" (rect 1090 1280 1183 1297)(font "Intel Clear" ))
+	(pt 1072 1296)
+	(pt 1168 1296)
+	(bus)
+)
+(connector
+	(text "Gate_Delay_3[31..0]" (rect 1088 1312 1185 1329)(font "Intel Clear" ))
+	(pt 1072 1328)
+	(pt 1168 1328)
+	(bus)
+)
+(connector
+	(text "Gate_3" (rect 1442 1184 1476 1201)(font "Intel Clear" ))
+	(pt 1432 1200)
+	(pt 1504 1200)
 )
 (junction (pt 1216 760))

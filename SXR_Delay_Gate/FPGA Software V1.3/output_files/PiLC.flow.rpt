@@ -1,5 +1,5 @@
 Flow report for PiLC
-Wed Jan 26 14:30:48 2022
+Mon Feb 07 13:32:17 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 26 14:30:46 2022       ;
+; Flow Status                        ; Successful - Mon Feb 07 13:32:14 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; PiLC                                        ;
 ; Top-level Entity Name              ; PILC                                        ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2022 14:30:20 ;
+; Start date & time ; 02/07/2022 13:31:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PiLC                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                ; 141812759174339.164320382061868        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                ; 141812759174339.164423711146232        ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                     ; On                                     ; --            ; --          ; --         ;
 ; FITTER_EFFORT                        ; Standard Fit                           ; Auto Fit      ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --         ;
@@ -112,11 +112,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4886 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5547 MB             ; 00:00:10                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4898 MB             ; 00:00:20                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5549 MB             ; 00:00:10                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4791 MB             ; 00:00:02                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:34                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

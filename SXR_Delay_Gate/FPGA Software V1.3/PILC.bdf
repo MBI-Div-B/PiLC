@@ -2358,6 +2358,38 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 112 32))
 	)
 )
+(symbol
+	(rect 1504 1168 1568 1216)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst8" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
 (connector
 	(text "PiLC_clk" (rect 770 -360 813 -348)(font "Arial" ))
 	(pt 760 -344)
@@ -2558,10 +2590,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1064 840)
 )
 (connector
-	(pt 1072 904)
-	(pt 1216 904)
-)
-(connector
 	(pt 1184 760)
 	(pt 1216 760)
 )
@@ -2661,11 +2689,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "Gate_3" (rect 906 760 940 777)(font "Intel Clear" ))
-	(pt 992 776)
-	(pt 896 776)
-)
-(connector
 	(text "PiLC_clk" (rect 1104 1184 1147 1196)(font "Arial" ))
 	(pt 1168 1200)
 	(pt 1086 1200)
@@ -2694,8 +2717,41 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "Gate_3" (rect 1442 1184 1476 1201)(font "Intel Clear" ))
-	(pt 1432 1200)
 	(pt 1504 1200)
+	(pt 1432 1200)
+)
+(connector
+	(pt 1072 904)
+	(pt 1216 904)
+)
+(connector
+	(pt 1216 904)
+	(pt 1496 904)
+)
+(connector
+	(pt 1496 904)
+	(pt 1496 1184)
+)
+(connector
+	(pt 1504 1184)
+	(pt 1496 1184)
+)
+(connector
+	(pt 1568 1192)
+	(pt 1568 1392)
+)
+(connector
+	(pt 1568 1392)
+	(pt 1040 1392)
+)
+(connector
+	(pt 1040 1392)
+	(pt 1040 776)
+)
+(connector
+	(text "Gate_3" (rect 906 760 940 777)(font "Intel Clear" ))
+	(pt 896 776)
+	(pt 1040 776)
 )
 (junction (pt 1216 760))
+(junction (pt 1216 904))
